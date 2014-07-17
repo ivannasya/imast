@@ -1,0 +1,32 @@
+.navbar.navbar-default.navbar-static-top.navbar-themes role="navigation" 
+  .container
+    .navbar-header
+      button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button" 
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand href="http://izkh.ru/"  АйЖКХ
+    .navbar-collapse.collapse
+      ul.nav.navbar-nav
+        li.hidden-xs.scr
+          img src="/assets/masters_cluch.png" 
+        li
+          a.navbar-themes__size href=root_path  Мастера
+        li
+          a href="/#about"  Узнать о сервисе
+        li
+          a href="/#new_order"  Создать заказ
+        li
+          a href="/#new_master" Стать мастером
+      ul.nav.navbar-nav.navbar-right
+        li.name
+          - if current_master
+            a href="/masters/#{current_master.id}" 
+              = current_master.name
+        li
+          - if current_master
+            = link_to destroy_master_session_path, method: :delete, class: 'navbar-themes__size border'
+              | Выйти
+          - else
+            a.navbar-themes__size.border href=master_session_path  Войти

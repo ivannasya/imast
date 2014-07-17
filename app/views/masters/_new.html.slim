@@ -1,0 +1,21 @@
+.masters__title
+  | Как стать мастером?
+  span Просто заполните форму ниже
+= form_tag '/masters', method: :post
+  label.label__themes.blue Адрес эл. почты
+  input.form-control.form-themes id="" name="master[email]" placeholder="" type="text" 
+    label.label__themes.blue Имя
+    input.form-control.form-themes id="" name="master[name]" placeholder="" type="text" 
+      label.label__themes.blue Пароль
+      input.form-control.form-themes id="" name="master[password]" placeholder="" type="password" 
+        label.label__themes.blue Категория
+        select.form-control__select id="" name="" 
+          option value="1"  Отделочные работы
+          option value="2"  Малярные работы
+        .become-master__add Добавить доп. категорию
+        span.lt-checkbox-wrapper
+          input#form-terms.lt-checkbox type="checkbox" 
+            label.lt-checkbox-label for="form-terms"
+        label.label__themes.blue.chek for="form-terms"  Хочу быть PRO-мастером
+        .clearfix
+  = submit_tag "Приступить к работе!", class: "btn btn-block btn-themes"

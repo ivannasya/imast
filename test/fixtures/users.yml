@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  about: MyText
+  average_cost: 1.5
+  phone: MyString
+
+two:
+  name: MyString
+  about: MyText
+  average_cost: 1.5
+  phone: MyString

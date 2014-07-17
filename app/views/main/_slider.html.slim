@@ -1,0 +1,54 @@
+.container-carousel
+  .container.carousel__padding
+    #carousel-example-generic.carousel.slide.carousel-themes data-ride="carousel" 
+      /! Indicators
+      ol.carousel-indicators
+        li.active data-slide-to="0" data-target="#carousel-example-generic" 
+        li data-slide-to="1" data-target="#carousel-example-generic" 
+        li data-slide-to="2" data-target="#carousel-example-generic" 
+      /! Wrapper for slides
+      .carousel-inner
+        .item.active
+          img alt="..." src="assets/sl1.jpg" 
+            .carousel-caption
+              .container
+                span
+                  | Александр Савинов
+                  b Ремонт квартир
+                .container-carousel__rating
+                  input.star name="star1" type="radio" /
+                  input.star name="star1" type="radio" /
+                  input.star name="star1" type="radio" /
+                  input.star name="star1" type="radio" /
+                  input.star name="star1" type="radio" /
+        .item
+          img alt="..." src="assets/sl2.jpg" 
+            .carousel-caption
+              .container
+                span
+                  | Александр Савинов
+                  b Ремонт квартир
+                .container-carousel__rating
+                  input.star name="star2" type="radio" /
+                  input.star name="star2" type="radio" /
+                  input.star name="star2" type="radio" /
+                  input.star name="star2" type="radio" /
+                  input.star name="star2" type="radio" /
+        .item
+          img alt="..." src="assets/sl3.jpg" 
+            .carousel-caption
+              .container
+                span
+                  | Александр Савинов
+                  b Ремонт квартир
+                .container-carousel__rating
+                  input.star name="star3" type="radio" /
+                  input.star name="star3" type="radio" /
+                  input.star name="star3" type="radio" /
+                  input.star name="star3" type="radio" /
+                  input.star name="star3" type="radio" /
+      /! Controls
+      a.left.carousel-control data-slide="prev" href="#carousel-example-generic" 
+        span.glyphicon.glyphicon-chevron-left
+      a.right.carousel-control data-slide="next" href="#carousel-example-generic" 
+        span.glyphicon.glyphicon-chevron-right

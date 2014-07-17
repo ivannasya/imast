@@ -1,0 +1,46 @@
+= render 'main/slider'
+.categories
+  .container
+    .row
+      .col-md-4.categories__popular-services
+        .categories__title Популярные категории
+        .popular-services__icons.finishing
+          span= link_to 'Отделочные работы', masters_path
+        .popular-services__icons.plumbing
+          span Сантехнические работы
+        .popular-services__icons.electric
+          span Услуги электрика
+        .popular-services__icons.painting
+          span Малярные работы
+        .popular-services__icons.carpenter
+          span Услуги плотника
+      .col-md-4.categories__new-orders
+        = render 'orders/index'
+      .col-md-4.create-order#new_order
+        = render 'orders/new'
+.masters
+  .container
+    .row
+      .col-md-4.masters__become-master#new_master
+        = render 'masters/new'
+      .col-md-8.masters__this-service#about
+        .masters__title.margin
+          | Что это за сервис?
+          span АйЖКХ Мастера - это сервис, который помогает людям добиваться результатов. Заказчик здесь получает качественно выполненную работу, а мастер никогда не останется без дела.
+        .row
+          .col-md-6.this-service__work
+            .masters__title
+              | Как это работает?
+            .work__present.step__one
+              span Заказчик создает заявку
+            .work__present__hr
+            .work__present.step__two
+              span Мастер принимает ее
+            .work__present__hr
+            .work__present.step__three
+              span Обговариваются условия
+            .work__present__hr
+            .work__present.step__four
+              span Мастер выполняет работу!
+          .col-md-6.this-service__are-always
+              = render "feedbacks/new"
