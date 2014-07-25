@@ -1,0 +1,21 @@
+ru:
+  simple_form:
+    labels:
+      master: 
+        email: Адрес эл. почты
+        name: Имя
+        about: О себе
+        average_cost: Средняя стоимость заказа
+        phone: Телефон
+        password: Новый пароль
+        password_confirmation: Повторите пароль
+  activerecord:
+    errors:
+      models:
+        master:
+          attributes:
+            password:
+              blank: Пароль не может быть пустым
+              too_short: Пароль слишком короткий. Введите не менее 8-ми символов.
+            password_confirmation:
+              confirmation: Пароли не совпадают

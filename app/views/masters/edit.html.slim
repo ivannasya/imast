@@ -1,0 +1,11 @@
+.master-container
+  .col-md-10
+    .row
+      .col-md-4
+      .col-md-5
+        = simple_form_for @master, url: { :action => "update_password" } do |f|
+          = f.input :password
+          = f.input :password_confirmation
+          = f.submit 'Сохранить пароль', class: "btn btn-block btn-themes"
+  .col-md-2.user-panel
+    = render 'masters/master_panel'

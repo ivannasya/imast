@@ -29,4 +29,4 @@
             = link_to destroy_master_session_path, method: :delete, class: 'navbar-themes__size border'
               | Выйти
           - else
-            a.navbar-themes__size.border href=master_session_path  Войти
+            a.navbar-themes__size.border data-toggle="modal" href="#session_path" Войти

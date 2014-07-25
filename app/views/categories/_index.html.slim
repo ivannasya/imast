@@ -1,0 +1,4 @@
+.categories__title Категории
+- @categories.each do |category|
+  .popular-services__icons.finishing
+    span= link_to "#{category.title}", masters_path

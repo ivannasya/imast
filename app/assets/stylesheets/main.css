@@ -376,6 +376,8 @@ textarea.form-themes {
 }
 .categories__popular-services {
     position: relative;
+    max-height: 304px;
+    overflow: scroll;
 }
 .popular-services__icons {
     color: #2d2d55;
@@ -385,10 +387,13 @@ textarea.form-themes {
     margin-bottom: 14px;
     transition: linear 0.2s;
 }
-
+.popular-services__icons a{
+    color: #2d2d55;
+    text-decoration: none;
+}
 
 .popular-services__icons:hover{
-    box-shadow: 0 0 10px #fff
+    box-shadow: 0 0 10px #fff;
 }
 
 
@@ -637,6 +642,17 @@ textarea.form-themes {
     opacity: 1;
 }
 
+/*login form*/
+.login-form {
+    position: fixed;
+    z-index: 100;
+    top: 70px;
+    width: 30%;
+    left: 35%;
+    background-color: white;
+    border: 2px solid black;
+}
+
 @media only screen and (max-width:991px) {
 .search__results__link__menu li{  margin-bottom: 0px;}
    .search__results__information img{ margin-bottom: 10px;}
@@ -671,7 +687,11 @@ textarea.form-themes {
     .navbar-themes__size {
         font-size: 18px;
     }
+    .login-form {
+        width: 54%;
+        margin-left: -8%;
+    }
 }
 @media only screen and (max-width:1199px) {
-.search__results__link__menu li{  margin-bottom: 4px;}
+    .search__results__link__menu li{  margin-bottom: 4px;}
 }

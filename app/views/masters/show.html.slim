@@ -1,1 +1,27 @@
-h1 ghghghg
+.master-container
+  .col-md-10
+    .row
+      .col-md-4
+        img.img-responsive src="/assets/test_m1.jpg" 
+        | Рейтинг 10/10
+        p PRO
+      .col-md-8.master-info
+        .title= @master.name
+        p 
+          label.label__themes Адрес эл. почты: 
+          = @master.email
+        p 
+          label.label__themes Телефон:
+          = @master.phone
+        p 
+          label.label__themes Средняя стоимость заказа:
+          = @master.average_cost
+      .col-md-12.master-info
+        p 
+          label.label__themes О себе:
+          = @master.about
+  .col-md-2.user-panel
+    - if current_master
+      = render 'masters/master_panel'
+    - else
+      = render 'masters/user_panel'

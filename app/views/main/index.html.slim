@@ -1,19 +1,10 @@
 = render 'main/slider'
+= render 'masters/login'
 .categories
   .container
     .row
       .col-md-4.categories__popular-services
-        .categories__title Популярные категории
-        .popular-services__icons.finishing
-          span= link_to 'Отделочные работы', masters_path
-        .popular-services__icons.plumbing
-          span Сантехнические работы
-        .popular-services__icons.electric
-          span Услуги электрика
-        .popular-services__icons.painting
-          span Малярные работы
-        .popular-services__icons.carpenter
-          span Услуги плотника
+        = render 'categories/index'
       .col-md-4.categories__new-orders
         = render 'orders/index'
       .col-md-4.create-order#new_order

@@ -9,13 +9,13 @@
       label.label__themes.blue Пароль
       input.form-control.form-themes id="" name="master[password]" placeholder="" type="password" 
         label.label__themes.blue Категория
-        select.form-control__select id="" name="" 
-          option value="1"  Отделочные работы
-          option value="2"  Малярные работы
-        .become-master__add Добавить доп. категорию
+        select.form-control__select name="master[master_categories][]" multiple='true'
+          - @categories.each do |category|
+            option value="#{category.id}" 
+              = category.title
         span.lt-checkbox-wrapper
           input#form-terms.lt-checkbox type="checkbox" 
             label.lt-checkbox-label for="form-terms"
-        label.label__themes.blue.chek for="form-terms"  Хочу быть PRO-мастером
+        label.label__themes.blue.chek for="form-terms" Хочу быть PRO-мастером
         .clearfix
   = submit_tag "Приступить к работе!", class: "btn btn-block btn-themes"

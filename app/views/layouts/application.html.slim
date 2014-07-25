@@ -2,11 +2,12 @@ doctype html
 html
   head
     title Master
-    = stylesheet_link_tag "application", media: "all", debug: false
     = javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
-    = javascript_include_tag 'application'
+    = stylesheet_link_tag "application", media: "all", debug: false
     = csrf_meta_tags
   body
     = render 'common/header'
     = yield
     = render 'common/footer'
+    = javascript_include_tag 'application'
+

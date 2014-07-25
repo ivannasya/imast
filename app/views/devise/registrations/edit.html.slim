@@ -1,0 +1,24 @@
+.master-container
+  = simple_form_for resource, as: resource_name, url: registration_path(resource_name), html: { method: :put } do |f|
+    .col-md-10
+      .row
+        .col-md-4
+          img.img-responsive src="/assets/test_m1.jpg" 
+          | Рейтинг 10/10
+          p PRO
+        .col-md-8.master-info
+          .notice-error= notice if flash[:notice]
+          = f.input :name
+          = f.input :email
+          .notice * Проверьте данные. На указанный адрес электронной почты будут приходить уведомления о новых заказах, и также он является логином вашего профиля.
+          = f.input :phone
+          = f.input :average_cost
+        .col-md-12.master-info
+          = f.input :about
+        .col-md-4
+          = f.submit 'Сохранить изменения', class: "btn btn-block btn-themes"
+    .col-md-2.user-panel
+      - if current_master
+        = render 'masters/master_panel'
+      - else
+        = render 'masters/user_panel'

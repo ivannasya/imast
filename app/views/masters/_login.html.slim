@@ -1,0 +1,16 @@
+#session_path.modal.fade aria-hidden="true" role="dialog" tabindex="-1"
+  .container
+     .col-md-4.login-form
+       h3 Войти в АйЖКХ
+       = form_tag '/masters/sign_in', method: :post 
+          label.label__themes.blue Адрес эл. почты
+          input.form-control.form-themes name="master[email]" type="email"
+            label.label__themes.blue Пароль
+            input.form-control.form-themes name="master[password]" type="password"
+          = submit_tag "Войти", class: "btn btn-block btn-themes"
+          p
+            = link_to new_master_registration_path
+              | Зарегистрируйтесь!
+          p
+            = link_to new_master_password_path
+              | Восстановить пароль
